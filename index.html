@@ -36,8 +36,10 @@
     </nav>
 
     <!-- Body -->
+    
     <!-- From -->
     <div id="login-area">
+        <img src="images/main.jpg" alt="">
         <h1 class="text-center">Welcome To Fotur Bank</h1>
         <div class="submit-area">
             <h4>Login</h4>
@@ -108,8 +110,9 @@
         /*----- deposit  button event handler -----*/
         const depositBtn = document.getElementById ("addDeposit");
         depositBtn.addEventListener( "click", function(){
-            const depositAmount = document.getElementById("depositAmount").value;
-            const depositNumber = parseFloat(depositAmount);
+            // const depositAmount = document.getElementById("depositAmount").value;
+            // const depositNumber = parseFloat(depositAmount);
+            const depositNumber = getInputNumber ("depositAmount");
 
             // const currentDeposit = document.getElementById ("currentDeposit").innerText;
             // const currentDepositNumber = parseFloat(currentDeposit);
@@ -129,11 +132,22 @@
         /*---- withdraw button event handler ----*/
         const withdrawBtn = document.getElementById ("addWithdraw");
         withdrawBtn.addEventListener( "click", function(){
-            const withdrawAmount = document.getElementById ("withdrawAmount").value;
-            const withdrawNumber = parseFloat (withdrawAmount);
+            // const withdrawAmount = document.getElementById ("withdrawAmount").value;
+            // const withdrawNumber = parseFloat (withdrawAmount);
+            const withdrawNumber = getInputNumber ("withdrawAmount");
+
+            updateSpanText("currentWithdraw", withdrawNumber);
+            updateSpanText("currentBalance", -1 * withdrawNumber);
+
+            document.getElementById ("withdrawAmount").value = "";
         })
 
 
+        function getInputNumber(id){
+            const amount = document.getElementById (id).value;
+            const amountNumber = parseFloat (amount);
+            return amountNumber;
+        }
 
         function updateSpanText(id, depositNumber){
             const current = document.getElementById (id).innerText;

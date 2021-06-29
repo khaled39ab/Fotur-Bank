@@ -1,5 +1,11 @@
 body{
-    padding: 50px;
+    padding: 30px;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 }
 .submit-area{
     margin-top: 20px;
