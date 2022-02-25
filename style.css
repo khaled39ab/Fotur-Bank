@@ -14,7 +14,7 @@ img{
     box-shadow: 5px 5px 10px gray;
 }
 #transaction-area{
-    /* display: none; */
+    display: none;
     margin-top: 50px;
 }
 .status{
