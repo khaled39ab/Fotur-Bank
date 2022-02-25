@@ -7,4 +7,31 @@ img{
     margin-right: auto;
     width: 40%;
 }
+.submit-area{
+    margin-top: 20px;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px gray;
+}
+#transaction-area{
+    /* display: none; */
+    margin-top: 50px;
+}
+.status{
+    margin: 5px 20px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.deposit{
+    background-color: slateblue;
+}
+.withdraw{
+    background-color: salmon;
+}
+.balance{
+    background-color: orange;
+}
+
+
 
